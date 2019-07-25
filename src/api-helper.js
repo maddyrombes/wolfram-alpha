@@ -1,8 +1,8 @@
 import axios from 'axios'
 const appId = "399K7K-5Y3YVE5V4X"
-const BASE_URL = "http://api.wolframalpha.com/v2/"
+const BASE_URL = "https://thingproxy.freeboard.io/fetch/http://api.wolframalpha.com/v2"
 
-export default fetchData = async () => {
-  const data = await axios.get(`${BASE_URL}/query?input=pi/&appid=${appId}`)
+export const fetchData = async () => {
+  const data = await axios.get(`${BASE_URL}/query?input=cats&appid=${appId}&includepodid=Result`)
   return data
 }
